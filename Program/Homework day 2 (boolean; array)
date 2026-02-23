@@ -1,0 +1,535 @@
+using System;
+					
+public class Program
+{
+    static void Boolean11_Solution()
+    {
+        Console.WriteLine("--- Boolean11 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        bool isAOdd = (a % 2 != 0);
+        bool isBOdd = (b % 2 != 0);
+
+        Console.WriteLine($"Оба числа нечетные: {isAOdd && isBOdd}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean12_Solution()
+    {
+        Console.WriteLine("--- Boolean12 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B: ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        bool allPositive = (a > 0) && (b > 0) && (c > 0);
+
+        Console.WriteLine($"Все числа положительные: {allPositive}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean13_Solution()
+    {
+        Console.WriteLine("--- Boolean13 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B: ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        bool atLeastOnePositive = (a > 0) || (b > 0) || (c > 0);
+
+        Console.WriteLine($"Хотя бы одно число положительное: {atLeastOnePositive}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean14_Solution()
+    {
+        Console.WriteLine("--- Boolean14 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B: ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        bool isAPositive = a > 0;
+        bool isBPositive = b > 0;
+        bool isCPositive = c > 0;
+
+        bool exactlyOnePositive =
+            (isAPositive && !isBPositive && !isCPositive) ||
+            (!isAPositive && isBPositive && !isCPositive) ||
+            (!isAPositive && !isBPositive && isCPositive);
+
+        Console.WriteLine($"Ровно одно число положительное: {exactlyOnePositive}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean15_Solution()
+    {
+        Console.WriteLine("--- Boolean15 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B: ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        bool isAPositive = a > 0;
+        bool isBPositive = b > 0;
+        bool isCPositive = c > 0;
+
+        bool exactlyTwoPositive =
+            (isAPositive && isBPositive && !isCPositive) ||
+            (isAPositive && !isBPositive && isCPositive) ||
+            (!isAPositive && isBPositive && isCPositive);
+
+        Console.WriteLine($"Ровно два числа положительные: {exactlyTwoPositive}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean16_Solution()
+    {
+        Console.WriteLine("--- Boolean16 ---");
+        Console.Write("Введите целое положительное число: ");
+        int n = int.Parse(Console.ReadLine());
+
+        bool isEven = (n % 2 == 0);
+        bool isTwoDigit = (n >= 10) && (n <= 99);
+
+        Console.WriteLine($"Число является четным двузначным: {isEven && isTwoDigit}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean17_Solution()
+    {
+        Console.WriteLine("--- Boolean17 ---");
+        Console.Write("Введите целое положительное число: ");
+        int n = int.Parse(Console.ReadLine());
+
+        bool isOdd = (n % 2 != 0);
+        bool isThreeDigit = (n >= 100) && (n <= 999);
+
+        Console.WriteLine($"Число является нечетным трехзначным: {isOdd && isThreeDigit}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean18_Solution()
+    {
+        Console.WriteLine("--- Boolean18 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B: ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        bool hasMatchingPair = (a == b) || (a == c) || (b == c);
+
+        Console.WriteLine($"Среди чисел есть хотя бы одна пара совпадающих: {hasMatchingPair}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean19_Solution()
+    {
+        Console.WriteLine("--- Boolean19 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B: ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        bool pairABOpposite = (a == -b && a != 0);
+        bool pairACOpposite = (a == -c && a != 0);
+        bool pairBCOpposite = (b == -c && b != 0);
+
+        bool hasOppositePair = pairABOpposite || pairACOpposite || pairBCOpposite;
+
+        Console.WriteLine($"Среди чисел есть хотя бы одна пара противоположных: {hasOppositePair}");
+        Console.WriteLine("------------------------------");
+    }
+    static void Boolean20_Solution()
+    {
+        Console.WriteLine("--- Boolean20 ---");
+        Console.Write("Введите трехзначное число: ");
+        int n = int.Parse(Console.ReadLine());
+
+        if (n < 100 || n > 999)
+        {
+            Console.WriteLine("Ошибка: Введено не трехзначное число.");
+            Console.WriteLine("------------------------------");
+            return;
+        }
+
+        int digit1 = n / 100;
+        int digit2 = (n / 10) % 10;
+        int digit3 = n % 10;
+
+        bool allDigitsDifferent = (digit1 != digit2) && (digit1 != digit3) && (digit2 != digit3);
+
+        Console.WriteLine($"Все цифры числа {n} различны: {allDigitsDifferent}");
+        Console.WriteLine("------------------------------");
+    }
+}
+using System;
+
+class Program
+{
+    static void Array1_Solution()
+    {
+        Console.WriteLine("--- Array1 ---");
+        Console.Write("Введите целое число N (> 0): ");
+        int n = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = 2 * i + 1; // Формула для n-го нечетного числа (начиная с 1-го)
+        }
+
+        Console.WriteLine("Элементы массива:");
+        foreach (int item in arr)
+        {
+            Console.Write($"{item} ");
+        }
+        Console.WriteLine(); // Переход на новую строку после вывода
+    }
+}
+using System;
+
+class Program
+{
+    static void Array2_Solution()
+    {
+        Console.WriteLine("--- Array2 ---");
+        Console.Write("Введите целое число N (> 0): ");
+        int n = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[n];
+        int currentPowerOfTwo = 2; // Начинаем с 2^1
+
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = currentPowerOfTwo;
+            currentPowerOfTwo *= 2; // Удваиваем для следующей степени двойки
+        }
+        
+        // Альтернативный способ с Math.Pow, но он возвращает double
+        // for (int i = 0; i < n; i++)
+        // {
+        //     arr[i] = (int)Math.Pow(2, i + 1);
+        // }
+
+        Console.WriteLine("Элементы массива:");
+        foreach (int item in arr)
+        {
+            Console.Write($"{item} ");
+        }
+        Console.WriteLine();
+    }
+}
+using System;
+
+class Program
+{
+    static void Array3_Solution()
+    {
+        Console.WriteLine("--- Array3 ---");
+        Console.Write("Введите целое число N (> 1): ");
+        int n = int.Parse(Console.ReadLine());
+        Console.Write("Введите первый член A1: ");
+        int a1 = int.Parse(Console.ReadLine());
+        Console.Write("Введите разность D: ");
+        int d = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[n];
+        arr[0] = a1; // Первый элемент всегда A1
+
+        for (int i = 1; i < n; i++)
+        {
+            arr[i] = arr[i - 1] + d; // Каждый следующий элемент = предыдущий + D
+        }
+        
+        // Альтернативный способ (через формулу A_i = A1 + (i-1)*D):
+        // for (int i = 0; i < n; i++)
+        // {
+        //     arr[i] = a1 + i * d;
+        // }
+
+        Console.WriteLine("Элементы массива:");
+        foreach (int item in arr)
+        {
+            Console.Write($"{item} ");
+        }
+        Console.WriteLine();
+    }
+}
+using System;
+
+class Program
+{
+    static void Array4_Solution()
+    {
+        Console.WriteLine("--- Array4 ---");
+        Console.Write("Введите целое число N (> 1): ");
+        int n = int.Parse(Console.ReadLine());
+        Console.Write("Введите первый член A1: ");
+        double a1 = double.Parse(Console.ReadLine()); // Используем double для геометрической прогрессии
+        Console.Write("Введите множитель Q: ");
+        double q = double.Parse(Console.ReadLine()); // Используем double для множителя
+
+        double[] arr = new double[n]; // Массив тоже делаем double
+        arr[0] = a1; // Первый элемент всегда A1
+
+        for (int i = 1; i < n; i++)
+        {
+            arr[i] = arr[i - 1] * q; // Каждый следующий элемент = предыдущий * Q
+        }
+        
+        // Альтернативный способ (через формулу A_i = A1 * Q^(i-1)):
+        // for (int i = 0; i < n; i++)
+        // {
+        //     arr[i] = a1 * Math.Pow(q, i);
+        // }
+
+        Console.WriteLine("Элементы массива:");
+        foreach (double item in arr) // Используем double для вывода
+        {
+            Console.Write($"{item:F2} "); // Выводим с 2 знаками после запятой
+        }
+        Console.WriteLine();
+    }
+}
+using System;
+
+class Program
+{
+    static void Array5_Solution()
+    {
+        Console.WriteLine("--- Array5 ---");
+        Console.Write("Введите целое число N (> 2) для ряда Фибоначчи: ");
+        int n = int.Parse(Console.ReadLine());
+
+        if (n <= 2)
+        {
+            Console.WriteLine("N должно быть больше 2 для этой задачи.");
+            Console.WriteLine("------------------------------");
+            return;
+        }
+
+        int[] fibArray = new int[n];
+
+        // Инициализация первых двух элементов по условию: f1 = 1, f2 = 1
+        fibArray[0] = 1; // f1
+        fibArray[1] = 1; // f2
+
+        // Вычисление остальных элементов по формуле f_k = f_{k-2} + f_{k-1}
+        for (int i = 2; i < n; i++)
+        {
+            fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+        }
+
+        Console.WriteLine("Элементы массива Фибоначчи:");
+        foreach (int item in fibArray)
+        {
+            Console.Write($"{item} ");
+        }
+        Console.WriteLine();
+        Console.WriteLine("------------------------------");
+    }
+}
+using System;
+
+class Program
+{
+    static void Array6_Solution()
+    {
+        Console.WriteLine("--- Array6 ---");
+        Console.Write("Введите целое число N (> 2): ");
+        int n = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число A (первый элемент): ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B (второй элемент): ");
+        int b = int.Parse(Console.ReadLine());
+
+        if (n <= 2)
+        {
+            Console.WriteLine("N должно быть больше 2 для этой задачи.");
+            Console.WriteLine("------------------------------");
+            return;
+        }
+
+        int[] arr = new int[n];
+        arr[0] = a;
+        arr[1] = b;
+        long currentSum = a + b; // Используем long для суммы, так как она может быстро расти
+
+        for (int i = 2; i < n; i++)
+        {
+            arr[i] = (int)currentSum; // Текущий элемент равен текущей сумме
+            currentSum += arr[i];     // Обновляем сумму, добавляя новый элемент
+        }
+
+        Console.WriteLine("Элементы массива:");
+        foreach (int item in arr)
+        {
+            Console.Write($"{item} ");
+        }
+        Console.WriteLine();
+        Console.WriteLine("------------------------------");
+    }
+}
+using System;
+using System.Linq; // Для метода .Reverse()
+
+class Program
+{
+    static void Array7_Solution()
+    {
+        Console.WriteLine("--- Array7 ---");
+        Console.Write("Введите количество элементов N: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[n];
+        Console.WriteLine("Введите элементы массива:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Элемент {i + 1}: ");
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Элементы массива в обратном порядке:");
+        // Способ 1: Цикл в обратном порядке
+        for (int i = n - 1; i >= 0; i--)
+        {
+            Console.Write($"{arr[i]} ");
+        }
+        Console.WriteLine();
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Array8_Solution()
+    {
+        Console.WriteLine("--- Array8 ---");
+        Console.Write("Введите количество элементов N: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[n];
+        Console.WriteLine("Введите элементы массива:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Элемент {i} (индекс): ");
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Элементы с нечетными индексами (по возрастанию индекса):");
+        for (int i = 1; i < n; i += 2) // Начинаем с индекса 1 (второй элемент, нечетный индекс)
+        {
+            Console.Write($"{arr[i]} ");
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Элементы с четными индексами (по убыванию индекса):");
+        int startIndex = (n % 2 == 0) ? n - 2 : n - 1; // Определяем, с какого четного индекса начать.
+                                                       // Если N четное, последний четный индекс N-2.
+                                                       // Если N нечетное, последний четный индекс N-1.
+                                                       // Но нам нужны только ЧЕТНЫЕ ИНДЕКСЫ, поэтому нужно
+                                                       // найти ближайший четный индекс, не превышающий n-1
+        
+        // Более простой способ найти последний четный индекс:
+        // Начать с n-1 и уменьшать, пока не найдем четный индекс.
+        int lastEvenIndex = n - 1;
+        while (lastEvenIndex >= 0 && lastEvenIndex % 2 != 0) // Если последний индекс нечетный, идем к предыдущему
+        {
+            lastEvenIndex--;
+        }
+
+        for (int i = lastEvenIndex; i >= 0; i -= 2) // Идем назад с шагом 2
+        {
+            Console.Write($"{arr[i]} ");
+        }
+        Console.WriteLine();
+        Console.WriteLine("------------------------------");
+    }
+}
+using System;
+
+class Program
+{
+    static void Array9_Solution()
+    {
+        Console.WriteLine("--- Array9 ---");
+        Console.Write("Введите количество элементов N: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[n];
+        Console.WriteLine("Введите элементы массива:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Элемент {i} (индекс): ");
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Элементы с четными индексами (по возрастанию индекса):");
+        for (int i = 0; i < n; i += 2) // Начинаем с индекса 0 (первый элемент, четный индекс)
+        {
+            Console.Write($"{arr[i]} ");
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Элементы с нечетными индексами (по убыванию индекса):");
+        // Находим последний нечетный индекс.
+        // Если N четное, последний индекс n-1 (нечетный).
+        // Если N нечетное, последний индекс n-2 (нечетный).
+        int lastOddIndex = n - 1;
+        while (lastOddIndex >= 0 && lastOddIndex % 2 == 0) // Если последний индекс четный, идем к предыдущему
+        {
+            lastOddIndex--;
+        }
+
+        for (int i = lastOddIndex; i >= 0; i -= 2) // Идем назад с шагом 2
+        {
+            Console.Write($"{arr[i]} ");
+        }
+        Console.WriteLine();
+        Console.WriteLine("------------------------------");
+    }
+}
+    static void Array10_Solution()
+    {
+        Console.WriteLine("--- Array10 ---");
+        Console.Write("Введите количество элементов N: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[n];
+        Console.WriteLine("Введите элементы массива:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Элемент {i}: ");
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("\nЧетные элементы (по возрастанию индекса):");
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] % 2 == 0)
+            {
+                Console.Write($"{arr[i]} ");
+            }
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Нечетные элементы (по убыванию индекса):");
+        for (int i = n - 1; i >= 0; i--)
+        {
+            if (arr[i] % 2 != 0)
+            {
+                Console.Write($"{arr[i]} ");
+            }
+        }
+        Console.WriteLine("\n------------------------------");
+    }
+}
