@@ -1,0 +1,347 @@
+using System;
+
+class Program
+{     
+static void If1_Solution()
+    {
+        Console.WriteLine("--- If1 ---");
+        Console.Write("Введите целое число: ");
+        int a = int.Parse(Console.ReadLine());
+
+        if (a > 0)
+        {
+            a++;
+        }
+        Console.WriteLine($"Результат: {a}");
+    }
+ static void If2_Solution()
+    {
+        Console.WriteLine("--- If2 ---");
+        Console.Write("Введите целое число: ");
+        int a = int.Parse(Console.ReadLine());
+
+        if (a > 0)
+        {
+            a++;
+        }
+        else
+        {
+            a -= 2;
+        }
+        Console.WriteLine($"Результат: {a}");
+    }
+ static void If3_Solution()
+{
+        Console.WriteLine("--- If3 ---");
+        Console.Write("Введите целое число: ");
+        int a = int.Parse(Console.ReadLine());
+
+        if (a > 0)
+        {
+            a++;
+        }
+        else if (a < 0)
+        {
+a -= 2;
+        }
+        else // a == 0
+        {
+            a = 10;
+        }
+        Console.WriteLine($"Результат: {a}");
+    }
+	    static void If4_Solution()
+    {
+        Console.WriteLine("--- If4 ---");
+        Console.Write("Введите первое целое число: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите второе целое число: ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите третье целое число: ");
+        int c = int.Parse(Console.ReadLine());
+
+        int positiveCount = 0;
+        if (a > 0) positiveCount++;
+        if (b > 0) positiveCount++;
+        if (c > 0) positiveCount++;
+
+        Console.WriteLine($"Количество положительных чисел: {positiveCount}");
+    }
+    static void If5_Solution()
+    {
+        Console.WriteLine("--- If5 ---");
+        Console.Write("Введите первое целое число: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите второе целое число: ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите третье целое число: ");
+        int c = int.Parse(Console.ReadLine());
+
+        int positiveCount = 0;
+        int negativeCount = 0;
+
+        if (a > 0) positiveCount++;
+        else if (a < 0) negativeCount++;
+
+        if (b > 0) positiveCount++;
+        else if (b < 0) negativeCount++;
+
+        if (c > 0) positiveCount++;
+        else if (c < 0) negativeCount++;
+
+        Console.WriteLine($"Количество положительных чисел: {positiveCount}");
+        Console.WriteLine($"Количество отрицательных чисел: {negativeCount}");
+    }
+    static void If6_Solution()
+    {
+        Console.WriteLine("--- If6 ---");
+        Console.Write("Введите первое число: ");
+        double a = double.Parse(Console.ReadLine());
+        Console.Write("Введите второе число: ");
+        double b = double.Parse(Console.ReadLine());
+
+        if (a > b)
+        {
+            Console.WriteLine($"Наибольшее число: {a}");
+        }
+        else
+        {
+            Console.WriteLine($"Наибольшее число: {b}");
+        }
+    }
+    static void If7_Solution()
+    {
+        Console.WriteLine("--- If7 ---");
+        Console.Write("Введите первое число: ");
+        double a = double.Parse(Console.ReadLine());
+        Console.Write("Введите второе число: ");
+        double b = double.Parse(Console.ReadLine());
+
+        if (a > b)
+        {
+            Console.WriteLine("Наибольшее число имеет порядковый номер: 1");
+        }
+        else // b > a
+        {
+            Console.WriteLine("Наибольшее число имеет порядковый номер: 2");
+        }
+    }
+    static void If8_Solution()
+    {
+        Console.WriteLine("--- If8 ---");
+        Console.Write("Введите первое число: ");
+        double a = double.Parse(Console.ReadLine());
+        Console.Write("Введите второе число: ");
+        double b = double.Parse(Console.ReadLine());
+
+        if (a < b)
+        {
+            Console.WriteLine($"Меньшее: {a}");
+            Console.WriteLine($"Большее: {b}");
+        }
+        else
+        {
+            Console.WriteLine($"Меньшее: {b}");
+            Console.WriteLine($"Большее: {a}");
+        }
+    }
+    static void If9_Solution()
+    {
+        Console.WriteLine("--- If9 ---");
+        Console.Write("Введите число A: ");
+        double a = double.Parse(Console.ReadLine());
+        Console.Write("Введите число B: ");
+        double b = double.Parse(Console.ReadLine());
+
+        if (a > b)
+        {
+            double temp = a; 
+            a = b;
+            b = temp;
+
+        }
+
+        Console.WriteLine($"Новое A: {a}");
+        Console.WriteLine($"Новое B: {b}");
+    }
+    static void If10_Solution()
+    {
+        Console.WriteLine("--- If10 ---");
+        Console.Write("Введите число A: ");
+        double a = double.Parse(Console.ReadLine());
+        Console.Write("Введите число B: ");
+        double b = double.Parse(Console.ReadLine());
+
+        if (a != b) 
+        {
+            double sum = a + b;
+            if (a > b)
+            {
+                a = sum; 
+            }
+            else
+            {
+                b = sum; 
+            }
+        }
+        else // Если числа равны
+        {
+            a = 0;
+            b = 0;
+        }
+
+        Console.WriteLine($"Новое A: {a}");
+        Console.WriteLine($"Новое B: {b}");
+    }
+}
+using System;
+
+class Program
+{
+        static void For1_Solution()
+    {
+        Console.WriteLine("--- For1 ---");
+        Console.Write("Введите целое число K: ");
+        int k = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число N (> 0): ");
+        int n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine(k);
+        }
+        Console.WriteLine("------------------------------");
+    }
+	    static void For2_Solution()
+    {
+        Console.WriteLine("--- For2 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B (больше A): ");
+        int b = int.Parse(Console.ReadLine());
+
+        int count = 0;
+        for (int i = a; i <= b; i++)
+        {
+            Console.WriteLine(i);
+            count++;
+        }
+        Console.WriteLine($"Количество чисел: {count}");
+        Console.WriteLine("------------------------------");
+    }
+    static void For3_Solution()
+    {
+        Console.WriteLine("--- For3 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B (больше A): ");
+        int b = int.Parse(Console.ReadLine());
+
+        int count = 0;
+        for (int i = b - 1; i > a; i--)
+        {
+            Console.WriteLine(i);
+            count++;
+        }
+Console.WriteLine($"Количество чисел: {count}");
+        Console.WriteLine("------------------------------");
+    }
+	    static void For4_Solution()
+    {
+        Console.WriteLine("--- For4 ---");
+        Console.Write("Введите цену 1 кг конфет: ");
+        double pricePerKg = double.Parse(Console.ReadLine());
+
+        for (int kg = 1; kg <= 10; kg++)
+        {
+            Console.WriteLine($"{kg} кг конфет стоит: {kg * pricePerKg:F2} руб.");
+        }
+        Console.WriteLine("------------------------------");
+    }
+    static void For5_Solution()
+    {
+        Console.WriteLine("--- For5 ---");
+        Console.Write("Введите цену 1 кг конфет: ");
+        double pricePerKg = double.Parse(Console.ReadLine());
+
+        for (double kg = 0.1; kg <= 1.0; kg += 0.1)
+        {
+            Console.WriteLine($"{kg:F1} кг конфет стоит: {kg * pricePerKg:F2} руб.");
+        }
+        Console.WriteLine("------------------------------");
+    }
+	    static void For6_Solution()
+    {
+        Console.WriteLine("--- For6 ---");
+        Console.Write("Введите цену 1 кг конфет: ");
+        double pricePerKg = double.Parse(Console.ReadLine());
+
+        for (double kg = 1.2; kg <= 2.0; kg += 0.2)
+        {
+            Console.WriteLine($"{kg:F1} кг конфет стоит: {kg * pricePerKg:F2} руб.");
+        }
+        Console.WriteLine("------------------------------");
+    }
+    static void For7_Solution()
+    {
+        Console.WriteLine("--- For7 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B (больше A): ");
+        int b = int.Parse(Console.ReadLine());
+
+        int sum = 0;
+        for (int i = a; i <= b; i++)
+        {
+            sum += i;
+        }
+        Console.WriteLine($"Сумма чисел от {a} до {b}: {sum}");
+        Console.WriteLine("------------------------------");
+    }
+    static void For8_Solution()
+    {
+        Console.WriteLine("--- For8 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B (больше A): ");
+        int b = int.Parse(Console.ReadLine());
+
+        long product = 1; // Используем long, чтобы избежать переполнения для больших произведений
+        for (int i = a; i <= b; i++)
+        {
+            product *= i;
+        }
+        Console.WriteLine($"Произведение чисел от {a} до {b}: {product}");
+        Console.WriteLine("------------------------------");
+    }
+	    static void For9_Solution()
+    {
+        Console.WriteLine("--- For9 ---");
+        Console.Write("Введите целое число A: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите целое число B (больше A): ");
+        int b = int.Parse(Console.ReadLine());
+
+        long sumOfSquares = 0; // Используем long на случай больших чисел
+        for (int i = a; i <= b; i++)
+        {
+            sumOfSquares += (long)i * i;
+        }
+        Console.WriteLine($"Сумма квадратов чисел от {a} до {b}: {sumOfSquares}");
+        Console.WriteLine("------------------------------");
+    }
+    static void For10_Solution()
+    {
+        Console.WriteLine("--- For10 ---");
+        Console.Write("Введите целое число N (> 0): ");
+        int n = int.Parse(Console.ReadLine());
+
+        double sum = 0.0;
+        for (int i = 1; i <= n; i++)
+        {
+sum += 1.0 / i;
+        }
+        Console.WriteLine($"Сумма ряда: {sum:F4}");
+        Console.WriteLine("------------------------------");
+    }
+}
